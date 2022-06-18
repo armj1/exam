@@ -18,3 +18,8 @@ Route::get('/authentification', function () {
     return view('authentification');
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

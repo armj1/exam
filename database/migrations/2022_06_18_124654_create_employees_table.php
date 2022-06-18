@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('department');
-            $table->foreignId('employer_ID')->references('id')->on('employers');
             $table->timestamps();
         });
     }

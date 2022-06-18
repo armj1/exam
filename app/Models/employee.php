@@ -10,4 +10,8 @@ class employee extends Model
     use HasFactory;
 
     protected $fillable = ['id','name', 'surname','department','employer_ID'];
+
+    public function report(){
+        return $this->hasMany(task::class);
+    }
 }
