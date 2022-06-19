@@ -16,10 +16,11 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (!(Auth::check() && Auth::user()->isAdmin()))
-        {
-            return redirect('home')->withErrors('Access denied to ADMIN functionality!');
+        if (Gate::allows('is-admin')) {
+            return redirect('adminDashboard');
         }
-        return $next($request);
+
+
+
     }
 }

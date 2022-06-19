@@ -24,3 +24,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Route::get('admin', 'AdminController');
+
+Route::get('/admin', 'authController@authenticated');

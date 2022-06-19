@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class authController extends Controller
+class pageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,6 @@ class authController extends Controller
     public function index()
     {
         //
-        $auth = auth::all();
-        return view ('auth', compact('auth'));
     }
 
     /**
@@ -84,6 +81,4 @@ class authController extends Controller
     {
         //
     }
-
-
 }
