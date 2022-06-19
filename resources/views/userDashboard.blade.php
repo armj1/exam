@@ -12,9 +12,7 @@
                     @endif     
                     </div>
                     <ul class="list-group">
-                       <li class="list-group-item"><a href="{{ url('category/create') }}">Add a new </a></li>
-                       <li class="list-group-item"><a href="{{ url('event/create') }}">Add a new </a></li>
-                       <li class="list-group-item"><a href="{{ url('ticket/create') }}">Add a new </a></li>
+                       <li class="list-group-item"><a href="{{ url('tasksUser') }}">Tasks</a></li>
                     </ul>
                 </div>
             </div>

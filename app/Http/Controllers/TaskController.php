@@ -15,7 +15,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $tasks = Author::orderBy('id')->get();
+        return view('tasks',  compact('tasks'));
     }
 
     /**

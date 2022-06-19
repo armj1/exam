@@ -14,9 +14,6 @@ use App\Http\Controllers\authController;
 |
 */
 
-Route::get('/authentification', function () {
-    return view('authentification');
-});
 
 
 Auth::routes();
@@ -26,3 +23,52 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Route::get('admin', 'AdminController');
 
 Route::get('/admin', 'authController@authenticated');
+
+
+Route::get('/tasks', function () {
+    return view('tasks');
+});
+
+Route::get('/users', function () {
+    return view('users');
+});
+
+Route::get('/createUsers', function () {
+    return view('createUsers');
+});
+
+
+Route::get('/listUsers', function () {
+    return view('listUsers');
+});
+
+Route::get('/deleteUsers', function () {
+    return view('deleteUsers');
+});
+
+Route::get('/updateUsers', function () {
+    return view('updateUsers');
+});
+
+Route::get('/reports', function () {
+    return view('reports');
+});
+
+Route::get('/addTask', function () {
+    return view('addTask');
+});
+
+Route::get('/taskList', function () {
+    return view('taskList');
+});
+
+Route::get('/listReports', function () {
+    return view('listReports');
+});
+Route::get('/deleteReports', function () {
+    return view('deleteReports');
+});
+
+Route::get('/tasksUser', function () {
+    return view('tasksUser');
+});

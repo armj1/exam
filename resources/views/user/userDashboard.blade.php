@@ -5,15 +5,14 @@
         <div class="col-sm">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Task Administration Panel</h4>
+                    <h4 class="card-title">User Panel</h4>
                     <div class="card-text">
                     @if(session()->has('message'))
                         {{ session()->get('message') }}
                     @endif     
                     </div>
                     <ul class="list-group">
-                       <li class="list-group-item"><a href="{{ url('/addTask') }}">Create tasks</a></li>
-                       <li class="list-group-item"><a href="{{ url('/taskList') }}">Look at tasks</a></li>
+                       <li class="list-group-item"><a href="{{ url('category/create') }}">Tasks </a></li>
                     </ul>
                 </div>
             </div>
