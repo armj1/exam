@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('department');
+            $table->integer('role')->unsigned(); // 1-admin , 2-user
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

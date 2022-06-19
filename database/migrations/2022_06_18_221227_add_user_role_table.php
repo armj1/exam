@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('employers', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('role')->unsigned()->default(1)->change();
         });
     }
 
@@ -26,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employers');
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('role')->unsigned()->default(null)->change();
+        });
     }
 };

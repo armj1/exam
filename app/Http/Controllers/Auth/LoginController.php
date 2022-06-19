@@ -21,20 +21,12 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-
-    protected function authenticated(Request $request, $user){
-        if ($user->isAdmin()){
-            return redirect()->route('dashboard');
-        }
-        return redirect('/home');
-    }
-
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
