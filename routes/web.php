@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,10 +41,6 @@ Route::get('/createUsers', function () {
 });
 
 
-Route::get('/listUsers', function () {
-    return view('listUsers');
-});
-
 Route::get('/deleteUsers', function () {
     return view('deleteUsers');
 });
@@ -58,9 +57,6 @@ Route::get('/addTask', function () {
     return view('addTask');
 });
 
-Route::get('/taskList', function () {
-    return view('taskList');
-});
 
 Route::get('/listReports', function () {
     return view('listReports');
@@ -72,3 +68,7 @@ Route::get('/deleteReports', function () {
 Route::get('/tasksUser', function () {
     return view('tasksUser');
 });
+
+Route::get('/listUsers', [UsersController::class, 'index']);
+Route::get('/taskList', [TaskController::class, 'index']);
+Route::get('/listReports', [ReportController::class, 'index']);

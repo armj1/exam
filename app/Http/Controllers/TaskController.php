@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\task;
 
 class TaskController extends Controller
 {
@@ -15,8 +15,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Author::orderBy('id')->get();
-        return view('tasks',  compact('tasks'));
+        $tasks=Task::all();
+        return view('taskList',['tasks' => $tasks]);
     }
 
     /**
